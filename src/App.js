@@ -4,12 +4,12 @@ import View from '@vkontakte/vkui/dist/components/View/View';
 import ScreenSpinner from '@vkontakte/vkui/dist/components/ScreenSpinner/ScreenSpinner';
 import '@vkontakte/vkui/dist/vkui.css';
 
-import Home from './panels/Game';
+import GAME from './panels/Game';
 import Intro from './panels/Intro';
 
 const ROUTES = {
 	INTRO: 'intro',
-	HOME: 'home'
+	GAME: 'game'
 }
 
 const App = () => {
@@ -39,7 +39,7 @@ const App = () => {
 
 	return (
 		<View activePanel={activePanel} popout={popout}>
-			<Home id={ROUTES.HOME} fetchedUser={fetchedUser} go={go} />
+			<GAME id={ROUTES.GAME} fetchedUser={fetchedUser} go={go} />
 			<Intro id={ROUTES.INTRO} go={go} />
 		</View>
 	);
