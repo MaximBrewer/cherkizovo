@@ -10,16 +10,20 @@ import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 
 const Home = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
-		<PanelHeader>Example</PanelHeader>
+		<PanelHeader style={{ position: "relative" }}>
+			<div style={{ width: "25%", position: "absolute", top: 0, left: 0 }}>
+				<div style={{ backgroundImage: 'url(../img/hb.png)', width: "100%", paddingTop: "115%", backgroundSize: "contain" }}></div>
+			</div>
+		</PanelHeader>
 		{fetchedUser &&
-		<Group title="User Data Fetched with VK Bridge">
-			<Cell
-				before={fetchedUser.photo_200 ? <Avatar src={fetchedUser.photo_200}/> : null}
-				description={fetchedUser.city && fetchedUser.city.title ? fetchedUser.city.title : ''}
-			>
-				{`${fetchedUser.first_name} ${fetchedUser.last_name}`}
-			</Cell>
-		</Group>}
+			<Group title="User Data Fetched with VK Bridge">
+				<Cell
+					before={fetchedUser.photo_200 ? <Avatar src={fetchedUser.photo_200} /> : null}
+					description={fetchedUser.city && fetchedUser.city.title ? fetchedUser.city.title : ''}
+				>
+					{`${fetchedUser.first_name} ${fetchedUser.last_name}`}
+				</Cell>
+			</Group>}
 
 		<Group title="Navigation Example">
 			<Div>
