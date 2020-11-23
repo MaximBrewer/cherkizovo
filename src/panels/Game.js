@@ -8,11 +8,13 @@ import Cell from '@vkontakte/vkui/dist/components/Cell/Cell';
 import Div from '@vkontakte/vkui/dist/components/Div/Div';
 import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 
+import hb from '../img/hb.png';
+
 const Home = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
 		<PanelHeader style={{ position: "relative" }}>
 			<div style={{ width: "25%", position: "absolute", top: 0, left: 0 }}>
-				<div style={{ backgroundImage: 'url(../img/hb.png)', width: "100%", paddingTop: "115%", backgroundSize: "contain" }}></div>
+				<img src={hb} alt=""/>
 			</div>
 		</PanelHeader>
 		{fetchedUser &&
