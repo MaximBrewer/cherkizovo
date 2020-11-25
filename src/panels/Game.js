@@ -14,7 +14,7 @@ const Home = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
 		<PanelHeader style={{ position: "relative" }}>
 			<div style={{ width: "25%", position: "absolute", top: 0, left: 0 }}>
-				<img src={hb} alt=""/>
+				<img src={hb} alt="" style={{ width: "100%" }} />
 			</div>
 		</PanelHeader>
 		{fetchedUser &&
