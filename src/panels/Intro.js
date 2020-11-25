@@ -8,15 +8,19 @@ import Icon28ChevronBack from '@vkontakte/icons/dist/28/chevron_back';
 import Icon24Back from '@vkontakte/icons/dist/24/back';
 
 import bg from '../img/bg.jpg';
-import './Intro.css';
+import './Intro.scss';
 
 const osName = platform();
 
-const Persik = props => (
-	<Panel id={props.id} style={{ backgroundImage: 'url(' + bg + ')' }}>
-
-	</Panel>
-);
+const Persik = props => {
+	return (
+		<Panel id={props.id}>
+			<div style={{ backgroundImage: 'url(' + bg + ')' }} className="Intro">
+				<button onClick={props.go(ROUTES.GAME)}></button>
+			</div>
+		</Panel>
+	)
+}
 
 Persik.propTypes = {
 	id: PropTypes.string.isRequired,
