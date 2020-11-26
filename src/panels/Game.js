@@ -61,14 +61,14 @@ const Game = ({ id, go, route, fetchedUser, userHasSeenIntro }) => {
 									</div>
 								</div>
 							</Div>
-							<Div style={{ width: "32%", justifyContent: "center", alignItems: "center" }}>
+							<Div style={{ width: "32%", justifyContent: "center", alignItems: "center", padding: "0 1rem 0 2rem" }}>
 								<Div style={{
 									background: "#AA2223",
 									border: "2px solid #FFFFFF",
 									boxSizing: "border-box",
 									boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
 									borderRadius: "31px",
-									padding: "0.3rem 1rem"
+									padding: "0.5rem 5rem"
 								}}>
 									<Div className={`control`} style={{ display: "flex", justifyContent: "space-between" }}>
 										<a href="#" onClick={moveLeft} style={{ display: "block", width: "25%" }}>
