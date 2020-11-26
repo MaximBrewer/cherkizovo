@@ -15,16 +15,14 @@ const Intro = ({ id, go, route, fetchedUser, userHasSeenIntro }) => (
 	<Panel id={id} centered={true}>
 		{(fetchedUser && !userHasSeenIntro) &&
 			<Fragment>
-				<Group>
-					<Div className='User' style={{ backgroundImage: 'url(' + bg + ')' }} >
-						{fetchedUser.photo_200 ? <Avatar src={fetchedUser.photo_200} /> : null}
-						<h2>Привет, {fetchedUser.first_name}</h2>
-						<h3>Этот сервис помогает следить за тем, чтобы туалетная бумага дома не заканчивалась и ты не попал в неловкую ситуацию, когда ее не окажется в самый нужный момент.</h3>
-						<Button mode='commerce' size="xl" level="2" onClick={() => go(route)}>
-							ОК, всё понятно
+				<Div className='Intro' style={{ backgroundImage: 'url(' + bg + ')' }} >
+					{fetchedUser.photo_200 ? <Avatar src={fetchedUser.photo_200} /> : null}
+					<h2>Привет, {fetchedUser.first_name}</h2>
+					<h3>Этот сервис помогает следить за тем, чтобы туалетная бумага дома не заканчивалась и ты не попал в неловкую ситуацию, когда ее не окажется в самый нужный момент.</h3>
+					<Button mode='commerce' size="xl" level="2" onClick={() => go(route)}>
+						ОК, всё понятно
 						</Button>
-					</Div>
-				</Group>
+				</Div>
 			</Fragment>
 		}
 	</Panel>
