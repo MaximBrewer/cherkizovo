@@ -25,7 +25,7 @@ const Game = ({ id, go, route, fetchedUser, userHasSeenIntro }) => (
 					</Div>
 					<Div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
 						<Div style={{ width: "32%", justifyContent: "center", alignItems: "center" }}>1</Div>
-						<Div style={{ width: "38%", justifyContent: "center", alignItems: "center" }}>
+						<Div style={{ width: "36%", justifyContent: "center", alignItems: "center" }}>
 							<div style={{
 								backgroundPosition: "center",
 								backgroundSize: "contain", 
@@ -40,7 +40,7 @@ const Game = ({ id, go, route, fetchedUser, userHasSeenIntro }) => (
 								</div>
 							</div>
 						</Div>
-						<Div style={{ width: "30%", justifyContent: "center", alignItems: "center" }}>3</Div>
+						<Div style={{ width: "32%", justifyContent: "center", alignItems: "center" }}>3</Div>
 					</Div>
 				</Div>
 			</Fragment>
