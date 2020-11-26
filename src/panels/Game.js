@@ -10,58 +10,27 @@ import FixedLayout from '@vkontakte/vkui/dist/components/FixedLayout/FixedLayout
 import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 
 
+import bg from '../img/game-bg.jpg';
 import hb from '../img/hb.png';
 
 const Game = ({ id, go, route, fetchedUser, userHasSeenIntro }) => (
 	<Panel id={id}>
-		<Group title="User Data Fetched with VK Bridge">
-			<Div>
-				Game
-			</Div>
-		</Group>
-		<FixedLayout vertical='bottom'>
-			<Div>
-				<Button mode='commerce' size="xl" level="2" onClick={() => go(route)}>
-					Назад
+		{(fetchedUser && !userHasSeenIntro) &&
+			<Fragment>
+				<Div className='Intro' style={{ textAlign: "center", backgroundImage: 'url(' + bg + ')', display: "flex", justifyContent: "center", alignItems: "center" }} >
+					<Div style={{ maxWidth: "25rem", color: "#ffffff" }}>
+						<h2>Новый год с</h2>
+						<h2><img src={logo} alt="" style={{ width: "50%" }} /></h2>
+						<h2>Миссия: <br /> накрой праздничный стол <br /> с&nbsp;Черкизово!</h2>
+						<h3>Набери больше всех баллов<br /> и&nbsp;получи крутые призы!</h3>
+						<Button mode='primary' size="m" level="2" onClick={() => go(route)}>
+							Играть
 						</Button>
-			</Div>
-		</FixedLayout>
-		{/* <PanelHeader style={{ position: "relative" }}>
-			<div style={{ width: "25%", position: "absolute", top: 0, left: 0 }}>
-				<img src={hb} alt="" style={{ width: "100%" }} />
-			</div>
-		</PanelHeader> */}
-		{/* {fetchedUser &&
-			<Group title="User Data Fetched with VK Bridge">
-				<Cell
-					before={fetchedUser.photo_200 ? <Avatar src={fetchedUser.photo_200} /> : null}
-					description={fetchedUser.city && fetchedUser.city.title ? fetchedUser.city.title : ''}
-				>
-					{`${fetchedUser.first_name} ${fetchedUser.last_name}`}
-				</Cell>
-			</Group>}
-
-		<Group title="Navigation Example">
-			<Div>
-				<Button size="xl" level="2" onClick={go} data-to={ROUTRES.}>
-					Show me the Persik, please
-				</Button>
-			</Div>
-		</Group> */}
+					</Div>
+				</Div>
+			</Fragment>
+		}
 	</Panel>
 );
-
-Game.propTypes = {
-	id: PropTypes.string.isRequired,
-	go: PropTypes.func.isRequired,
-	fetchedUser: PropTypes.shape({
-		photo_200: PropTypes.string,
-		first_name: PropTypes.string,
-		last_name: PropTypes.string,
-		city: PropTypes.shape({
-			title: PropTypes.string,
-		}),
-	}),
-};
 
 export default Game;
