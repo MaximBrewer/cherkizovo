@@ -12,10 +12,10 @@ import './Intro.css';
 import bg from '../img/bg.jpg';
 
 const Intro = ({ id, go, route, fetchedUser, userHasSeenIntro }) => (
-	<Panel id={id} centered={true} className='Intro' style={{ backgroundImage: 'url(' + bg + ')' }}>
+	<Panel id={id}>
 		{(fetchedUser && !userHasSeenIntro) &&
 			<Fragment>
-				<Div >
+				<Div className='Intro' style={{ backgroundImage: 'url(' + bg + ')' }} >
 					{fetchedUser.photo_200 ? <Avatar src={fetchedUser.photo_200} /> : null}
 					<h2>Привет, {fetchedUser.first_name}</h2>
 					<h3>Этот сервис помогает следить за тем, чтобы туалетная бумага дома не заканчивалась и ты не попал в неловкую ситуацию, когда ее не окажется в самый нужный момент.</h3>
