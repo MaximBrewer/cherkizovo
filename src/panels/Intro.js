@@ -10,7 +10,7 @@ import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 
 import './Intro.css';
 import bg from '../img/intro-bg.jpg';
-import logo from '../img/logo-white.jpg';
+import logo from '../img/logo-white.png';
 
 const Intro = ({ id, go, route, fetchedUser, userHasSeenIntro }) => (
 	<Panel id={id}>
