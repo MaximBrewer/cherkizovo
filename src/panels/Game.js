@@ -15,50 +15,71 @@ import './Game.css';
 import bg from '../img/game-bg.jpg';
 import canavsBg from '../img/canvas-bg.png';
 
-const Game = ({ id, go, route, fetchedUser, userHasSeenIntro }) => (
-	<Panel id={id}>
-		{fetchedUser &&
-			<Fragment>
-				<Div className='Game' style={{ textAlign: "center", backgroundImage: 'url(' + bg + ')', color: "#ffffff" }} >
-					<Div style={{ paddingLeft: "1rem" }}>
-						<h4>Миссия: <br /> накрой праздничный стол с Черкизово!</h4>
-						<p>Набери больше всех баллов и&nbsp;получи крутые призы!</p>
-					</Div>
-					<Div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-						<Div style={{ width: "32%", justifyContent: "center", alignItems: "center" }}>1</Div>
-						<Div style={{ width: "36%", justifyContent: "center", alignItems: "center" }}>
-							<div style={{
-								backgroundPosition: "center",
-								backgroundSize: "contain",
-								backgroundImage: 'url(' + canavsBg + ')',
-								width: "100%",
-								height: "0",
-								paddingTop: "150%",
-								ƒposition: "relative"
-							}}>
-								<div style={{ position: "absolute", left: 0, top: 0, width: "100%", height: "100%" }}>
-									<canvas style={{ width: "100%", height: "100%" }}></canvas>
-								</div>
-							</div>
+const Game = ({ id, go, route, fetchedUser, userHasSeenIntro }) => {
+	const moveLeft = (e) => {
+		e.preventDefault();
+	}
+	const moveRight = (e) => {
+		e.preventDefault();
+
+	}
+	const moveDown = (e) => {
+		e.preventDefault();
+
+	}
+	const drop = (e) => {
+		e.preventDefault();
+
+	}
+	const rotate = (e) => {
+		e.preventDefault();
+
+	}
+	return (
+		<Panel id={id}>
+			{fetchedUser &&
+				<Fragment>
+					<Div className='Game' style={{ textAlign: "center", backgroundImage: 'url(' + bg + ')', color: "#ffffff" }} >
+						<Div style={{ paddingLeft: "1rem" }}>
+							<h4>Миссия: <br /> накрой праздничный стол с Черкизово!</h4>
+							<p>Набери больше всех баллов и&nbsp;получи крутые призы!</p>
 						</Div>
-						<Div style={{ width: "32%", justifyContent: "center", alignItems: "center" }}>
-							<Div className={`control`} style={{ display: "flex" }}>
-								<a href="#" onClick={ } style={{ display: "block" }}>
-									<Right />
-								</a>
-								<a href="#" onClick={ } style={{ display: "block" }}>
-									<Rotate />
-								</a>
-								<a href="#" onClick={ } style={{ display: "block" }}>
-									<Left />
-								</a>
+						<Div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+							<Div style={{ width: "32%", justifyContent: "center", alignItems: "center" }}>1</Div>
+							<Div style={{ width: "36%", justifyContent: "center", alignItems: "center" }}>
+								<div style={{
+									backgroundPosition: "center",
+									backgroundSize: "contain",
+									backgroundImage: 'url(' + canavsBg + ')',
+									width: "100%",
+									height: "0",
+									paddingTop: "150%",
+									ƒposition: "relative"
+								}}>
+									<div style={{ position: "absolute", left: 0, top: 0, width: "100%", height: "100%" }}>
+										<canvas style={{ width: "100%", height: "100%" }}></canvas>
+									</div>
+								</div>
+							</Div>
+							<Div style={{ width: "32%", justifyContent: "center", alignItems: "center" }}>
+								<Div className={`control`} style={{ display: "flex" }}>
+									<a href="#" onClick={moveLeft} style={{ display: "block" }}>
+										<Right />
+									</a>
+									<a href="#" onClick={rotate} style={{ display: "block" }}>
+										<Rotate />
+									</a>
+									<a href="#" onClick={moveRight} style={{ display: "block" }}>
+										<Left />
+									</a>
+								</Div>
 							</Div>
 						</Div>
 					</Div>
-				</Div>
-			</Fragment>
-		}
-	</Panel >
-);
+				</Fragment>
+			}
+		</Panel >
+	)
+}
 
 export default Game;
