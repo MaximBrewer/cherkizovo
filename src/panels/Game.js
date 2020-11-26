@@ -12,20 +12,21 @@ import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 
 import bg from '../img/game-bg.jpg';
 import hb from '../img/hb.png';
+import logo from '../img/logo-white.png';
 
 const Game = ({ id, go, route, fetchedUser, userHasSeenIntro }) => (
 	<Panel id={id}>
 		{(fetchedUser && !userHasSeenIntro) &&
 			<Fragment>
-				<Div className='Intro' style={{ textAlign: "center", backgroundImage: 'url(' + bg + ')', display: "flex", justifyContent: "center", alignItems: "center" }} >
-					<Div style={{ maxWidth: "25rem", color: "#ffffff" }}>
-						<h2>Новый год с</h2>
-						<h2><img src={logo} alt="" style={{ width: "50%" }} /></h2>
-						<h2>Миссия: <br /> накрой праздничный стол <br /> с&nbsp;Черкизово!</h2>
-						<h3>Набери больше всех баллов<br /> и&nbsp;получи крутые призы!</h3>
-						<Button mode='primary' size="m" level="2" onClick={() => go(route)}>
-							Играть
-						</Button>
+				<Div className='Intro' style={{ textAlign: "center", backgroundImage: 'url(' + bg + ')', color: "#ffffff" }} >
+					<Div>
+						<h3>Миссия: <br /> накрой праздничный стол с Черкизово!</h3>
+						<h4>Набери больше всех баллов<br /> и&nbsp;получи крутые призы!</h4>
+					</Div>
+					<Div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+						<Div style={{ width: "35%", justifyContent: "center", alignItems: "center" }}>1</Div>
+						<Div style={{ width: "35%", justifyContent: "center", alignItems: "center" }}>2</Div>
+						<Div style={{ width: "30%", justifyContent: "center", alignItems: "center" }}>3</Div>
 					</Div>
 				</Div>
 			</Fragment>
