@@ -7,14 +7,14 @@
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 0;
+  padding: 3.5rem 0 0 0;
 }
 .Game .Div--ios {
   padding: 0;
 }
 .Game h4 {
-  margin: 0 0 1rem 0;
+  margin: 0 0 0.5rem 0;
 }
 .Game h5 {
-  margin: 0 0 1rem 0;
+  margin: 0 0 0.5rem 0;
 }
