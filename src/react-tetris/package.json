@@ -1,0 +1,90 @@
+{
+  "_from": "react-tetris",
+  "_id": "react-tetris@0.1.2",
+  "_inBundle": false,
+  "_integrity": "sha512-GE94sKXlICVLTLEvJytmPG+9OdNPBA+ZFHG3u5+U1uaBS/Snj6XXiUP6SqNs3IzZUS91MhbRDGLkJlfIUDW8Jw==",
+  "_location": "/react-tetris",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "react-tetris",
+    "name": "react-tetris",
+    "escapedName": "react-tetris",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/react-tetris/-/react-tetris-0.1.2.tgz",
+  "_shasum": "1fcc1721d82cf3389aae792e39ba894a9d35d954",
+  "_spec": "react-tetris",
+  "_where": "/Users/maxim/Projects/cherkizovo",
+  "author": {
+    "name": "Matthew Brandly"
+  },
+  "bugs": {
+    "url": "https://github.com/brandly/react-tetris/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "flux": "3.1.3",
+    "keymaster": "1.6.2",
+    "lodash": "4.17.15",
+    "prop-types": "15.7.2"
+  },
+  "deprecated": false,
+  "description": "Embed a game of Tetris in your React app",
+  "devDependencies": {
+    "@babel/core": "7.10.2",
+    "@babel/plugin-external-helpers": "7.10.1",
+    "@babel/preset-env": "7.10.2",
+    "@babel/preset-react": "7.10.1",
+    "babel-eslint": "10.1.0",
+    "babel-plugin-lodash": "3.3.4",
+    "babel-plugin-transform-class-properties": "6.24.1",
+    "eslint": "7.3.0",
+    "eslint-config-airbnb": "18.2.0",
+    "eslint-config-prettier": "6.11.0",
+    "eslint-plugin-import": "2.21.2",
+    "eslint-plugin-jsx-a11y": "6.3.0",
+    "eslint-plugin-react": "7.20.0",
+    "prettier": "2.0.5",
+    "react": "16.13.0",
+    "react-dom": "16.13.0",
+    "rollup": "2.17.1",
+    "rollup-plugin-babel": "4.4.0",
+    "rollup-plugin-commonjs": "10.1.0",
+    "rollup-plugin-node-builtins": "2.1.2",
+    "rollup-plugin-node-globals": "1.4.0",
+    "rollup-plugin-node-resolve": "5.2.0",
+    "styled-components": "2.2.2",
+    "uglify-js": "3.9.4"
+  },
+  "homepage": "https://brandly.github.io/react-tetris/",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "name": "react-tetris",
+  "peerDependencies": {
+    "react": "* || ^16.0.0",
+    "react-dom": "* || ^16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brandly/react-tetris.git"
+  },
+  "scripts": {
+    "build": "npm run clean && npm run build:lib && npm run build:app && npm run html",
+    "build:app": "rollup --config rollup.app.js",
+    "build:lib": "rollup --config rollup.lib.js",
+    "clean": "rm -rf dist/*",
+    "html": "cp src/index.html dist/",
+    "lint": "eslint src/ app/",
+    "test": "npm run lint",
+    "watch": "npm run build:app -- --watch"
+  },
+  "version": "0.1.2"
+}
