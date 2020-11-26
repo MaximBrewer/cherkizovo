@@ -30,6 +30,9 @@ const App = () => {
 	const [userHasSeenIntro, setUserHasSeenIntro] = useState(false);
 
 	useEffect(() => {
+		if (bridge.supports("VKWebAppResizeWindow")) {
+			bridge.send("VKWebAppResizeWindow", { "width": 1440, "height": 1024 });
+		}
 		bridge.subscribe(({ detail: { type, data } }) => {
 			if (type === 'VKWebAppUpdateConfig') {
 				const schemeAttribute = document.createAttribute('scheme');
