@@ -37,12 +37,12 @@ const Game = ({ id, go, route, fetchedUser, userHasSeenIntro }) => {
 
 	}
 
-	const canvas = useRef(null);
+	// const canvas = useRef(null);
 
-	useEffect(() => {
-		const ctx = canvas.current.getContext('2d');
-		ctx.fillRect(0, 0, 100, 100);
-	}, [])
+	// useEffect(() => {
+	// 	const ctx = canvas.current.getContext('2d');
+	// 	ctx.fillRect(0, 0, 100, 100);
+	// }, [])
 
 	// var ctx = canvas.getContext( '2d' );
 	// var W = 300, H = 600;
