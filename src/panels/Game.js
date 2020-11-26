@@ -68,17 +68,17 @@ const Game = ({ id, go, route, fetchedUser, userHasSeenIntro }) => {
 									boxSizing: "border-box",
 									boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
 									borderRadius: "31px",
-									padding: "0.5rem 5rem"
+									padding: "0.5rem 1.5rem"
 								}}>
 									<Div className={`control`} style={{ display: "flex", justifyContent: "space-between" }}>
 										<a href="#" onClick={moveLeft} style={{ display: "block", width: "25%" }}>
-											<Left style={{ width: "100%" }} />
+											<Left style={{ display: "block", width: "100%" }} />
 										</a>
 										<a href="#" onClick={rotate} style={{ display: "block", width: "25%" }}>
-											<Rotate style={{ width: "100%" }} />
+											<Rotate style={{ display: "block", width: "100%" }} />
 										</a>
 										<a href="#" onClick={moveRight} style={{ display: "block", width: "25%" }}>
-											<Right style={{ width: "100%" }} />
+											<Right style={{ display: "block", width: "100%" }} />
 										</a>
 									</Div>
 								</Div>
