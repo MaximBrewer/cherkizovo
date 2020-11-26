@@ -26,7 +26,15 @@ const Game = ({ id, go, route, fetchedUser, userHasSeenIntro }) => (
 					<Div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
 						<Div style={{ width: "32%", justifyContent: "center", alignItems: "center" }}>1</Div>
 						<Div style={{ width: "38%", justifyContent: "center", alignItems: "center" }}>
-							<div style={{ backgroundImage: 'url(' + canavsBg + ')', width: "100%", height: "0", paddingTop: "150%", position: "relative" }}>
+							<div style={{
+								backgroundPosition: "center",
+								backgroundSize: "contain", 
+								backgroundImage: 'url(' + canavsBg + ')', 
+								width: "100%", 
+								height: "0", 
+								paddingTop: "150%", 
+								ƒposition: "relative"
+							}}>
 								<div style={{ position: "absolute", left: 0, top: 0, width: "100%", height: "100%" }}>
 									<canvas style={{ width: "100%", height: "100%" }}></canvas>
 								</div>
