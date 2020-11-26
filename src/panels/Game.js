@@ -62,16 +62,25 @@ const Game = ({ id, go, route, fetchedUser, userHasSeenIntro }) => {
 								</div>
 							</Div>
 							<Div style={{ width: "32%", justifyContent: "center", alignItems: "center" }}>
-								<Div className={`control`} style={{ display: "flex", justifyContent: "space-between" }}>
-									<a href="#" onClick={moveLeft} style={{ display: "block", width: "32%" }}>
-										<Left style={{ width: "100%" }} />
-									</a>
-									<a href="#" onClick={rotate} style={{ display: "block", width: "32%" }}>
-										<Rotate style={{ width: "100%" }} />
-									</a>
-									<a href="#" onClick={moveRight} style={{ display: "block", width: "32%" }}>
-										<Right style={{ width: "100%" }} />
-									</a>
+								<Div style={{
+									background: "#AA2223",
+									border: "2px solid #FFFFFF",
+									boxSizing: "border-box",
+									boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
+									borderRadius: "31px",
+									padding: "0.3rem 1rem"
+								}}>
+									<Div className={`control`} style={{ display: "flex", justifyContent: "space-between" }}>
+										<a href="#" onClick={moveLeft} style={{ display: "block", width: "25%" }}>
+											<Left style={{ width: "100%" }} />
+										</a>
+										<a href="#" onClick={rotate} style={{ display: "block", width: "25%" }}>
+											<Rotate style={{ width: "100%" }} />
+										</a>
+										<a href="#" onClick={moveRight} style={{ display: "block", width: "25%" }}>
+											<Right style={{ width: "100%" }} />
+										</a>
+									</Div>
 								</Div>
 							</Div>
 						</Div>
