@@ -16,9 +16,9 @@ import logo from '../img/logo-white.png';
 
 const Game = ({ id, go, route, fetchedUser, userHasSeenIntro }) => (
 	<Panel id={id}>
-		{(fetchedUser && !userHasSeenIntro) &&
+		{fetchedUser &&
 			<Fragment>
-				<Div className='Intro' style={{ textAlign: "center", backgroundImage: 'url(' + bg + ')', color: "#ffffff" }} >
+				<Div className='Game' style={{ textAlign: "center", backgroundImage: 'url(' + bg + ')', color: "#ffffff" }} >
 					<Div>
 						<h3>Миссия: <br /> накрой праздничный стол с Черкизово!</h3>
 						<h4>Набери больше всех баллов<br /> и&nbsp;получи крутые призы!</h4>
