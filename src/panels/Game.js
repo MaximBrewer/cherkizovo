@@ -54,7 +54,7 @@ const Game = ({ id, go, route, fetchedUser, userHasSeenIntro }) => {
 									width: "100%",
 									height: "0",
 									paddingTop: "150%",
-									ƒposition: "relative"
+									position: "relative"
 								}}>
 									<div style={{ position: "absolute", left: 0, top: 0, width: "100%", height: "100%" }}>
 										<canvas style={{ width: "100%", height: "100%" }}></canvas>
