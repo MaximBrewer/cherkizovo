@@ -10,6 +10,7 @@ import FixedLayout from '@vkontakte/vkui/dist/components/FixedLayout/FixedLayout
 import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 
 
+import './Game.css';
 import bg from '../img/game-bg.jpg';
 import hb from '../img/hb.png';
 import logo from '../img/logo-white.png';

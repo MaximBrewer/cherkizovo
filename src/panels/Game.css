@@ -1,0 +1,10 @@
+.Game {
+  display: block;
+  width: 800px;
+  height:568px;
+  margin: 0;
+  box-sizing: border-box;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
