@@ -8,7 +8,7 @@ import Button from '@vkontakte/vkui/dist/components/Button/Button';
 import FixedLayout from '@vkontakte/vkui/dist/components/FixedLayout/FixedLayout';
 import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 
-import './Intro.css';
+import './Intro.scss';
 import bg from '../img/bg.jpg';
 
 const Intro = ({ id, go, route, fetchedUser, userHasSeenIntro }) => (
