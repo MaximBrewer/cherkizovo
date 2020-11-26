@@ -8,6 +8,7 @@ import Cell from '@vkontakte/vkui/dist/components/Cell/Cell';
 import Div from '@vkontakte/vkui/dist/components/Div/Div';
 import FixedLayout from '@vkontakte/vkui/dist/components/FixedLayout/FixedLayout';
 import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
+import { Left, Right, Rotate } from '../Icons'
 
 
 import './Game.css';
@@ -28,11 +29,11 @@ const Game = ({ id, go, route, fetchedUser, userHasSeenIntro }) => (
 						<Div style={{ width: "36%", justifyContent: "center", alignItems: "center" }}>
 							<div style={{
 								backgroundPosition: "center",
-								backgroundSize: "contain", 
-								backgroundImage: 'url(' + canavsBg + ')', 
-								width: "100%", 
-								height: "0", 
-								paddingTop: "150%", 
+								backgroundSize: "contain",
+								backgroundImage: 'url(' + canavsBg + ')',
+								width: "100%",
+								height: "0",
+								paddingTop: "150%",
 								ƒposition: "relative"
 							}}>
 								<div style={{ position: "absolute", left: 0, top: 0, width: "100%", height: "100%" }}>
@@ -40,7 +41,19 @@ const Game = ({ id, go, route, fetchedUser, userHasSeenIntro }) => (
 								</div>
 							</div>
 						</Div>
-						<Div style={{ width: "32%", justifyContent: "center", alignItems: "center" }}>3</Div>
+						<Div style={{ width: "32%", justifyContent: "center", alignItems: "center" }}>
+							<Div className={`control`} style={{ display: "flex" }}>
+								<a href="#" onClick={ } style={{ display: "block" }}>
+									<Right />
+								</a>
+								<a href="#" onClick={ } style={{ display: "block" }}>
+									<Rotate />
+								</a>
+								<a href="#" onClick={ } style={{ display: "block" }}>
+									<Left />
+								</a>
+							</Div>
+						</Div>
 					</Div>
 				</Div>
 			</Fragment>
