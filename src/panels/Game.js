@@ -40,7 +40,6 @@ const Game = ({ id, go, route, fetchedUser, userHasSeenIntro }) => {
 	const canvasOuter = useRef(null);
 
 	const [canvas, setCanvas] = useState({
-		height: 432,
 		width: 288
 	})
 
@@ -100,14 +99,10 @@ const Game = ({ id, go, route, fetchedUser, userHasSeenIntro }) => {
 								<div style={{
 									backgroundPosition: "center",
 									backgroundSize: "contain",
-									backgroundImage: 'url(' + canavsBg + ')',
-									width: "100%",
-									height: "0",
-									paddingTop: "150%",
-									position: "relative"
+									backgroundImage: 'url(' + canavsBg + ')'
 								}}>
-									<div style={{ position: "absolute", left: 0, top: 0, width: "100%", height: "100%" }} ref={canvasOuter}>
-										<Stage width={canvas.width} height={canvas.height}>
+									<div ref={canvasOuter}>
+										<Stage width={canvas.width} height={canvas.width * 1.5}>
 											<Layer>
 												<Text text="Try to drag a star" />
 												{/* {stars.map((star) => (
