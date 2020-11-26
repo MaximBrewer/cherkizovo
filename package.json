@@ -28,9 +28,11 @@
     "eruda": "^2.4.1",
     "eruda-code": "^2.0.0",
     "eruda-dom": "^2.0.0",
+    "konva": "^7.2.0",
     "prop-types": "^15.7.2",
     "react": "^16.14.0",
-    "react-dom": "^16.14.0"
+    "react-dom": "^16.14.0",
+    "react-konva": "^17.0.0-0"
   },
   "browserslist": {
     "production": [
