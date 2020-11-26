@@ -12,7 +12,7 @@ import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 
 import './Game.css';
 import bg from '../img/game-bg.jpg';
-import canavsBg from '../img/canvas-bg.jpg';
+import canavsBg from '../img/canvas-bg.png';
 
 const Game = ({ id, go, route, fetchedUser, userHasSeenIntro }) => (
 	<Panel id={id}>
