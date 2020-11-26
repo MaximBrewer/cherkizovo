@@ -107,7 +107,7 @@ const Game = ({ id, go, route, fetchedUser, userHasSeenIntro }) => {
 									position: "relative"
 								}}>
 									<div style={{ position: "absolute", left: 0, top: 0, width: "100%", height: "100%" }} ref={canvasOuter}>
-										<Stage width={canvas.width} height={canvas.heigh}>
+										<Stage width={canvas.width} height={canvas.height}>
 											<Layer>
 												<Text text="Try to drag a star" />
 												{/* {stars.map((star) => (
