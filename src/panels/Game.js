@@ -9,7 +9,7 @@ import Div from '@vkontakte/vkui/dist/components/Div/Div';
 import FixedLayout from '@vkontakte/vkui/dist/components/FixedLayout/FixedLayout';
 import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 import { Left, Right, Rotate } from '../Icons'
-import { Stage, Layer, Rect, Text } from 'react-konva';
+import Tetris from '@react-tetris';
 
 
 import './Game.css';
@@ -112,35 +112,22 @@ const Game = ({ id, go, route, fetchedUser, userHasSeenIntro }) => {
 									backgroundImage: 'url(' + canavsBg + ')'
 								}}>
 									<div ref={canvasOuter}>
-										<Stage width={canvas.width} height={canvas.width * 1.5}>
-											<Layer>
-												<Text text="Try to drag a star" />
-												{/* {stars.map((star) => (
-													<Star
-														key={star.id}
-														id={star.id}
-														x={star.x}
-														y={star.y}
-														numPoints={5}
-														innerRadius={20}
-														outerRadius={40}
-														fill="#89b717"
-														opacity={0.8}
-														draggable
-														rotation={star.rotation}
-														shadowColor="black"
-														shadowBlur={10}
-														shadowOpacity={0.6}
-														shadowOffsetX={star.isDragging ? 10 : 5}
-														shadowOffsetY={star.isDragging ? 10 : 5}
-														scaleX={star.isDragging ? 1.2 : 1}
-														scaleY={star.isDragging ? 1.2 : 1}
-														onDragStart={handleDragStart}
-														onDragEnd={handleDragEnd}
-													/>
-												))} */}
-											</Layer>
-										</Stage>
+										<Tetris>
+											{({ HeldPiece, Gameboard, PieceQueue, points, linesCleared }) => {
+												// Render it however you'd like
+												return (
+													<div>
+														<HeldPiece />
+														<div>
+															<p>Points: {points}</p>
+															<p>Lines Cleared: {linesCleared}</p>
+														</div>
+														<Gameboard />
+														<PieceQueue />
+													</div>
+												);
+											}}
+										</Tetris>
 									</div>
 								</div>
 							</Div>
