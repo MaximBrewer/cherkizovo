@@ -21,8 +21,8 @@ const Game = ({ id, go, route, fetchedUser, userHasSeenIntro }) => (
 			<Fragment>
 				<Div className='Game' style={{ textAlign: "center", backgroundImage: 'url(' + bg + ')', color: "#ffffff" }} >
 					<Div>
-						<h3>Миссия: <br /> накрой праздничный стол с Черкизово!</h3>
-						<h4>Набери больше всех баллов<br /> и&nbsp;получи крутые призы!</h4>
+						<h4>Миссия: <br /> накрой праздничный стол с Черкизово!</h4>
+						<h5>Набери больше всех баллов<br /> и&nbsp;получи крутые призы!</h5>
 					</Div>
 					<Div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
 						<Div style={{ width: "35%", justifyContent: "center", alignItems: "center" }}>1</Div>
