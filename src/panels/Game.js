@@ -12,8 +12,7 @@ import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 
 import './Game.css';
 import bg from '../img/game-bg.jpg';
-import hb from '../img/hb.png';
-import logo from '../img/logo-white.png';
+import canavsBg from '../img/canvas-bg.jpg';
 
 const Game = ({ id, go, route, fetchedUser, userHasSeenIntro }) => (
 	<Panel id={id}>
@@ -26,7 +25,9 @@ const Game = ({ id, go, route, fetchedUser, userHasSeenIntro }) => (
 					</Div>
 					<Div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
 						<Div style={{ width: "32%", justifyContent: "center", alignItems: "center" }}>1</Div>
-						<Div style={{ width: "38%", justifyContent: "center", alignItems: "center" }}>2</Div>
+						<Div style={{ width: "38%", justifyContent: "center", alignItems: "center" }}>
+							<canvas style={{ backgroundImage: 'url(' + canavsBg + ')', width: "100%", height: "100%" }}></canvas>
+						</Div>
 						<Div style={{ width: "30%", justifyContent: "center", alignItems: "center" }}>3</Div>
 					</Div>
 				</Div>
