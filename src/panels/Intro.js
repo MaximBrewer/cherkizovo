@@ -9,7 +9,7 @@ import FixedLayout from '@vkontakte/vkui/dist/components/FixedLayout/FixedLayout
 import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 
 import './Intro.css';
-import bg from '../img/bg.jpg';
+import bg from '../img/intro-bg.jpg';
 
 const Intro = ({ id, go, route, fetchedUser, userHasSeenIntro }) => (
 	<Panel id={id}>
