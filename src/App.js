@@ -30,7 +30,7 @@ const App = () => {
 	const [userHasSeenIntro, setUserHasSeenIntro] = useState(false);
 
 	useEffect(() => {
-		bridge.subscribe(({ detail: { type, data }}) => {
+		bridge.subscribe(({ detail: { type, data } }) => {
 			if (type === 'VKWebAppUpdateConfig') {
 				const schemeAttribute = document.createAttribute('scheme');
 				schemeAttribute.value = data.scheme ? data.scheme : 'client_light';
@@ -39,7 +39,7 @@ const App = () => {
 		});
 		async function fetchData() {
 			const user = await bridge.send('VKWebAppGetUserInfo');
-			const sheetState = await bridge.send('VKWebAppStorageGet', { keys: [STORAGE_KEYS.STATE, STORAGE_KEYS.STATUS]});
+			const sheetState = await bridge.send('VKWebAppStorageGet', { keys: [STORAGE_KEYS.STATE, STORAGE_KEYS.STATUS] });
 			if (Array.isArray(sheetState.keys)) {
 				const data = {};
 				sheetState.keys.forEach(({ key, value }) => {
@@ -62,7 +62,7 @@ const App = () => {
 						setSnackbar(<Snackbar
 							layout='vertical'
 							onClose={() => setSnackbar(null)}
-							before={<Avatar size={24} style={{backgroundColor: 'var(--dynamic_red)'}}><Icon24Error fill='#fff' width={14} height={14} /></Avatar>}
+							before={<Avatar size={24} style={{ backgroundColor: 'var(--dynamic_red)' }}><Icon24Error fill='#fff' width={14} height={14} /></Avatar>}
 							duration={900}
 						>
 							Проблема с получением данных из Storage
@@ -71,7 +71,7 @@ const App = () => {
 						setFetchedState({});
 					}
 				});
-				
+
 			} else {
 				setFetchedState({});
 			}
@@ -98,7 +98,29 @@ const App = () => {
 			setSnackbar(<Snackbar
 				layout='vertical'
 				onClose={() => setSnackbar(null)}
-				before={<Avatar size={24} style={{backgroundColor: 'var(--dynamic_red)'}}><Icon24Error fill='#fff' width={14} height={14} /></Avatar>}
+				before={<Avatar size={24} style={{ backgroundColor: 'var(--dynamic_red)' }}><Icon24Error fill='#fff' width={14} height={14} /></Avatar>}
+				duration={900}
+			>
+				Проблема с отправкой данных в Storage
+			</Snackbar>
+			);
+		}
+	}
+
+	const goBack = async (panel) => {
+		try {
+			await bridge.send('VKWebAppStorageSet', {
+				key: STORAGE_KEYS.STATUS,
+				value: JSON.stringify({
+					hasSeenIntro: false,
+				}),
+			});
+			go(panel);
+		} catch (error) {
+			setSnackbar(<Snackbar
+				layout='vertical'
+				onClose={() => setSnackbar(null)}
+				before={<Avatar size={24} style={{ backgroundColor: 'var(--dynamic_red)' }}><Icon24Error fill='#fff' width={14} height={14} /></Avatar>}
 				duration={900}
 			>
 				Проблема с отправкой данных в Storage
@@ -109,8 +131,24 @@ const App = () => {
 
 	return (
 		<View activePanel={activePanel} popout={popout}>
-			<Game id={ROUTES.GAME} fetchedState={fetchedState} snackbarError={snackbar} />
-			<Intro id={ROUTES.INTRO} fetchedUser={fetchedUser} go={viewIntro} route={ROUTES.GAME} userHasSeenIntro={userHasSeenIntro} />
+			<Game
+				id={ROUTES.GAME}
+				fetchedUser={fetchedUser}
+				fetchedState={fetchedState}
+				go={goBack}
+				route={ROUTES.INTRO}
+				userHasSeenIntro={userHasSeenIntro}
+				snackbarError={snackbar}
+			/>
+			<Intro
+				id={ROUTES.INTRO}
+				fetchedUser={fetchedUser}
+				fetchedState={fetchedState}
+				go={viewIntro}
+				route={ROUTES.GAME}
+				userHasSeenIntro={userHasSeenIntro}
+				snackbarError={snackbar}
+			/>
 		</View>
 	);
 }

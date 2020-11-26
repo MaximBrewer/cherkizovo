@@ -17,6 +17,13 @@ const Game = ({ id, go, fetchedUser }) => (
 				Game
 			</Div>
 		</Group>
+		<FixedLayout vertical='bottom'>
+			<Div>
+				<Button mode='commerce' size="xl" level="2" onClick={() => go(route)}>
+					Назад
+						</Button>
+			</Div>
+		</FixedLayout>
 		{/* <PanelHeader style={{ position: "relative" }}>
 			<div style={{ width: "25%", position: "absolute", top: 0, left: 0 }}>
 				<img src={hb} alt="" style={{ width: "100%" }} />
