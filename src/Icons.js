@@ -1,7 +1,7 @@
 import React from 'react';
 export const Left = () => {
     return (
-        <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect y="69.9438" width="69.9438" height="69.9438" transform="rotate(-90 0 69.9438)" fill="url(#pattern0)" />
             <defs>
                 <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
@@ -14,7 +14,7 @@ export const Left = () => {
 }
 export const Right = () => {
     return (
-        <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="69.9438" width="69.9438" height="69.9438" transform="rotate(90 69.9438 0)" fill="url(#pattern0)" />
             <defs>
                 <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
@@ -27,7 +27,7 @@ export const Right = () => {
 }
 export const Rotate = () => {
     return (
-        <svg width="63" height="63" viewBox="0 0 63 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="0 0 63 63" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="62.3596" height="62.3596" fill="url(#pattern0)" />
             <defs>
                 <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
