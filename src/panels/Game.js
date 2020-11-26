@@ -10,14 +10,19 @@ import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 
 import hb from '../img/hb.png';
 
-const Home = ({ id, go, fetchedUser }) => (
+const Game = ({ id, go, fetchedUser }) => (
 	<Panel id={id}>
-		<PanelHeader style={{ position: "relative" }}>
+		<Group title="User Data Fetched with VK Bridge">
+			<Div>
+				Game
+			</Div>
+		</Group>
+		{/* <PanelHeader style={{ position: "relative" }}>
 			<div style={{ width: "25%", position: "absolute", top: 0, left: 0 }}>
 				<img src={hb} alt="" style={{ width: "100%" }} />
 			</div>
-		</PanelHeader>
-		{fetchedUser &&
+		</PanelHeader> */}
+		{/* {fetchedUser &&
 			<Group title="User Data Fetched with VK Bridge">
 				<Cell
 					before={fetchedUser.photo_200 ? <Avatar src={fetchedUser.photo_200} /> : null}
@@ -29,15 +34,15 @@ const Home = ({ id, go, fetchedUser }) => (
 
 		<Group title="Navigation Example">
 			<Div>
-				<Button size="xl" level="2" onClick={go} data-to="persik">
+				<Button size="xl" level="2" onClick={go} data-to={ROUTRES.}>
 					Show me the Persik, please
 				</Button>
 			</Div>
-		</Group>
+		</Group> */}
 	</Panel>
 );
 
-Home.propTypes = {
+Game.propTypes = {
 	id: PropTypes.string.isRequired,
 	go: PropTypes.func.isRequired,
 	fetchedUser: PropTypes.shape({
@@ -50,4 +55,4 @@ Home.propTypes = {
 	}),
 };
 
-export default Home;
+export default Game;
