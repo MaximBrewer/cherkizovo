@@ -9,7 +9,7 @@ import Div from '@vkontakte/vkui/dist/components/Div/Div';
 import FixedLayout from '@vkontakte/vkui/dist/components/FixedLayout/FixedLayout';
 import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 import { Left, Right, Rotate } from '../Icons'
-import Tetris from '@react-tetris';
+import Tetris from 'react-tetris';
 
 
 import './Game.css';
