@@ -16,6 +16,16 @@ import './Game.css';
 import bg from '../img/game-bg.jpg';
 import canavsBg from '../img/canvas-bg.png';
 
+const COLS = 10, ROWS = 15, shapes = [
+	[1, 1, 1, 1],
+	[1, 1, 1, 0, 1],
+	[1, 1, 1, 0, 0, 0, 1],
+	[1, 1, 0, 0, 1, 1],
+	[1, 1, 0, 0, 0, 1, 1],
+	[0, 1, 1, 0, 1, 1],
+	[0, 1, 0, 0, 1, 1, 1]
+];
+
 const Game = ({ id, go, route, fetchedUser, userHasSeenIntro }) => {
 	const moveLeft = (e) => {
 		e.preventDefault();

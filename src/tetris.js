@@ -1,11 +1,4 @@
 var COLS = 10, ROWS = 20;
-var board = [];
-var lose;
-var interval;
-var intervalRender;
-var current; // current moving shape
-var currentX, currentY; // position of current shape
-var freezed; // is current shape settled on the board?
 var shapes = [
     [ 1, 1, 1, 1 ],
     [ 1, 1, 1, 0,
@@ -21,6 +14,15 @@ var shapes = [
     [ 0, 1, 0, 0,
       1, 1, 1 ]
 ];
+
+
+var board = [];
+var lose;
+var interval;
+var intervalRender;
+var current; // current moving shape
+var currentX, currentY; // position of current shape
+var freezed; // is current shape settled on the board?
 var colors = [
     'cyan', 'orange', 'blue', 'yellow', 'red', 'green', 'purple'
 ];
