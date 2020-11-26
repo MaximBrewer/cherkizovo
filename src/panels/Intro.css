@@ -1,6 +1,7 @@
 .Intro {
   display: block;
   width: 100%;
+  min-width: 700px;
   margin: 0;
   background-size: contain;
   background-position: center;
