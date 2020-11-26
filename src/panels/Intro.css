@@ -1,3 +1,6 @@
+.Intro *{
+  box-sizing: border-box;
+}
 .Intro {
   display: block;
   width: 800px;

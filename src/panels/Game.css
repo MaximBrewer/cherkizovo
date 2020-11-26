@@ -1,3 +1,6 @@
+.Game *{
+  box-sizing: border-box;
+}
 .Game {
   display: block;
   width: 800px;
