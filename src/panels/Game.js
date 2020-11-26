@@ -62,15 +62,15 @@ const Game = ({ id, go, route, fetchedUser, userHasSeenIntro }) => {
 								</div>
 							</Div>
 							<Div style={{ width: "32%", justifyContent: "center", alignItems: "center" }}>
-								<Div className={`control`} style={{ display: "flex" }}>
-									<a href="#" onClick={moveLeft} style={{ display: "block" }}>
-										<Left />
+								<Div className={`control`} style={{ display: "flex", justifyContent: "space-between" }}>
+									<a href="#" onClick={moveLeft} style={{ display: "block", width: "32%" }}>
+										<Left style={{ width: "100%" }} />
 									</a>
-									<a href="#" onClick={rotate} style={{ display: "block" }}>
-										<Rotate />
+									<a href="#" onClick={rotate} style={{ display: "block", width: "32%" }}>
+										<Rotate style={{ width: "100%" }} />
 									</a>
-									<a href="#" onClick={moveRight} style={{ display: "block" }}>
-										<Right />
+									<a href="#" onClick={moveRight} style={{ display: "block", width: "32%" }}>
+										<Right style={{ width: "100%" }} />
 									</a>
 								</Div>
 							</Div>
