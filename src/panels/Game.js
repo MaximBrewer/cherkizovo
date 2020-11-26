@@ -37,7 +37,12 @@ const Game = ({ id, go, route, fetchedUser, userHasSeenIntro }) => {
 
 	}
 
-	// const canvas = useRef(null);
+	const canvasOuter = useRef(null);
+
+	const [canvas, setCanvas] = useState({
+		height: 432,
+		width: 288
+	})
 
 	// useEffect(() => {
 	// 	const ctx = canvas.current.getContext('2d');
@@ -101,8 +106,8 @@ const Game = ({ id, go, route, fetchedUser, userHasSeenIntro }) => {
 									paddingTop: "150%",
 									position: "relative"
 								}}>
-									<div style={{ position: "absolute", left: 0, top: 0, width: "100%", height: "100%" }}>
-										<Stage width={"100%"} height={"100%"}>
+									<div style={{ position: "absolute", left: 0, top: 0, width: "100%", height: "100%" }} ref={canvasOuter}>
+										<Stage width={canvas.width} height={canvas.heigh}>
 											<Layer>
 												<Text text="Try to drag a star" />
 												{/* {stars.map((star) => (
