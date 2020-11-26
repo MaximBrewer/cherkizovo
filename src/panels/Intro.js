@@ -16,15 +16,15 @@ const Intro = ({ id, go, route, fetchedUser, userHasSeenIntro }) => (
 	<Panel id={id}>
 		{(fetchedUser && !userHasSeenIntro) &&
 			<Fragment>
-				<Div className='Intro' style={{ backgroundImage: 'url(' + bg + ')', display: "flex", justifyContent: "center", alignItems: "center" }} >
+				<Div className='Intro' style={{ textAlign: "center", backgroundImage: 'url(' + bg + ')', display: "flex", justifyContent: "center", alignItems: "center" }} >
 					{/* {fetchedUser.photo_200 ? <Avatar src={fetchedUser.photo_200} /> : null}
 					<h2>Привет, {fetchedUser.first_name}</h2> */}
-					<Div style={{ maxWidth: "20rem", color: "#ffffff" }}>
-						<h3>Новый год с</h3>
-						<h3><img src={logo} alt="" style={{ width: "50%" }} /></h3>
-						<h3>Миссия: <br /> накрой праздничный стол <br /> с&nbsp;Черкизово!</h3>
-						<h4>Набери больше всех баллов<br /> и&nbsp;получи крутые призы!</h4>
-						<Button mode='commerce' size="sm" level="2" onClick={() => go(route)}>
+					<Div style={{ maxWidth: "25rem", color: "#ffffff" }}>
+						<h2>Новый год с</h2>
+						<h2><img src={logo} alt="" style={{ width: "50%" }} /></h2>
+						<h2>Миссия: <br /> накрой праздничный стол <br /> с&nbsp;Черкизово!</h2>
+						<h3>Набери больше всех баллов<br /> и&nbsp;получи крутые призы!</h3>
+						<Button mode='commerce' size="md" level="2" onClick={() => go(route)}>
 							Играть
 						</Button>
 					</Div>
