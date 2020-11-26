@@ -12,7 +12,7 @@ import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 
 import hb from '../img/hb.png';
 
-const Game = ({ id, go, fetchedUser }) => (
+const Game = ({ id, go, route, fetchedUser, userHasSeenIntro }) => (
 	<Panel id={id}>
 		<Group title="User Data Fetched with VK Bridge">
 			<Div>
