@@ -21,7 +21,7 @@ const Game = ({ id, go, route, fetchedUser, userHasSeenIntro }) => (
 				<Div className='Game' style={{ textAlign: "center", backgroundImage: 'url(' + bg + ')', color: "#ffffff" }} >
 					<Div style={{ paddingLeft: "1rem" }}>
 						<h4>Миссия: <br /> накрой праздничный стол с Черкизово!</h4>
-						<h5>Набери больше всех баллов<br /> и&nbsp;получи крутые призы!</h5>
+						<p>Набери больше всех баллов и&nbsp;получи крутые призы!</p>
 					</Div>
 					<Div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
 						<Div style={{ width: "32%", justifyContent: "center", alignItems: "center" }}>1</Div>
