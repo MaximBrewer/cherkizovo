@@ -10,18 +10,24 @@ import Avatar from '@vkontakte/vkui/dist/components/Avatar/Avatar';
 
 import './Intro.css';
 import bg from '../img/intro-bg.jpg';
+import logo from '../img/logo-white.jpg';
 
 const Intro = ({ id, go, route, fetchedUser, userHasSeenIntro }) => (
 	<Panel id={id}>
 		{(fetchedUser && !userHasSeenIntro) &&
 			<Fragment>
-				<Div className='Intro' style={{ backgroundImage: 'url(' + bg + ')' }} >
-					{fetchedUser.photo_200 ? <Avatar src={fetchedUser.photo_200} /> : null}
-					<h2>Привет, {fetchedUser.first_name}</h2>
-					<h3>Этот сервис помогает следить за тем, чтобы туалетная бумага дома не заканчивалась и ты не попал в неловкую ситуацию, когда ее не окажется в самый нужный момент.</h3>
-					<Button mode='commerce' size="xl" level="2" onClick={() => go(route)}>
-						ОК, всё понятно
+				<Div className='Intro' style={{ backgroundImage: 'url(' + bg + ')', display: "flex", justifyContent: "center", alignItems: "center" }} >
+					{/* {fetchedUser.photo_200 ? <Avatar src={fetchedUser.photo_200} /> : null}
+					<h2>Привет, {fetchedUser.first_name}</h2> */}
+					<Div style={{ maxWidth: "20rem", color: "#ffffff" }}>
+						<h3>Новый год с</h3>
+						<h3><img src={logo} alt="" style={{ width: "50%" }} /></h3>
+						<h3>Миссия: <br /> накрой праздничный стол <br /> с&nbsp;Черкизово!</h3>
+						<h4>Набери больше всех баллов<br /> и&nbsp;получи крутые призы!</h4>
+						<Button mode='commerce' size="sm" level="2" onClick={() => go(route)}>
+							Играть
 						</Button>
+					</Div>
 				</Div>
 			</Fragment>
 		}
